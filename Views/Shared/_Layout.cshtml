@@ -1,0 +1,44 @@
+﻿<!DOCTYPPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Supermarket Management</title>
+        <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.css" />
+    </head>
+    <body>
+        <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="index">Supemarket</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" asp-controller="home" asp-action="index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="categories" asp-action="index">Categories</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        </header>
+        <div class="container">
+            <div class="pb-3">
+                <!-- Takes the content from the view and render here -->
+                @RenderSection("Title")
+            </div>
+            <div>
+                <!-- Takes the content from the view and render here -->
+                @RenderBody()
+            </div>
+        </div>
+
+    </body>
+
+</html>
